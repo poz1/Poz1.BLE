@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:Poz1.BLE.Sample.Converter;assembly=Poz1.BLE.Sample"
+             xmlns:control="clr-namespace:Poz1.BLE.Sample.Control;assembly=Poz1.BLE.Sample"
+             x:Class="Poz1.BLE.Sample.View.ServicesPage">
+
+  <RelativeLayout>
+    <control:BindableListView ItemsSource="{Binding ServicesList}" ItemClickCommand="{Binding ServiceSelectedCommand}"/>
+    <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" IsRunning="{Binding ScanForServices}" IsVisible="{Binding ScanForServices}"/>
+  </RelativeLayout>
+
+</ContentPage>

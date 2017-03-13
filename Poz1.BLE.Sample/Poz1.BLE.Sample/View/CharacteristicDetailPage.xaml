@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Poz1.BLE.Sample.View.CharacteristicDetailPage">
+  
+  <StackLayout Padding="20">
+    <Label Text="{Binding Characteristic.Guid, StringFormat='GUID: {0}'}" VerticalOptions="Center"/>
+    <Label Text="{Binding Characteristic.Properties, StringFormat='Properties: {0}'}" VerticalOptions="Center"/>
+    <Button Text="Load Value" Margin="0,20,0,20" Command="{Binding LoadValueCommand}"></Button>
+    <Label Text="{Binding Value, StringFormat='Value: {0}'}" VerticalOptions="Center"/>
+  </StackLayout>
+  
+</ContentPage>
